@@ -51,6 +51,14 @@ public class Main {
 		
 	}//end of binarySearch method 
 	
+	
+	/**
+     * Calculates the determinant of a square matrix.
+     * @param matrix A 2D integer array representing the matrix.
+     * @return Determinant of the matrix, or 0 for non-square matrices.
+     * @throws IllegalArgumentException if the matrix is null or non-square.
+     */
+	
 	public static int determinant(int[][] matrix) {
 		
 		if (matrix == null || matrix.length == 0 || matrix.length != matrix[0].length) {
@@ -76,6 +84,15 @@ public class Main {
 		
 		
 	}//end of determinant method
+	
+	
+	 /**
+     * Generates the minor of a matrix excluding the given row and column.
+     * @param matrix The original matrix.
+     * @param row The row to exclude.
+     * @param col The column to exclude.
+     * @return The minor matrix.
+     */
 	
 	private static int[][] getMinor(int[][] matrix, int row, int col) {
         int n = matrix.length;
