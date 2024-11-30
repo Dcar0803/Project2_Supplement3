@@ -117,5 +117,40 @@ public class Main {
         }
         return minor;
     }//end of getMinor method 
+	
+	public static int[][] multiplyMatrices(int[][]matrixA, int[][]matrixB) {
+		
+		int rowsA, colsA, rowsB, colsB;
+		
+		rowsA = matrixA.length;
+		colsA = matrixA[0].length;
+		rowsB = matrixB.length;
+		colsB = matrixB[0].length;
+		
+		if(colsA != rowsB) {
+			
+			throw new IllegalArgumentException("Matrix A's columns must match Matrix B's rows.");
+			
+		}//end of if statement
+		
+		int result[][] = new int[rowsA][colsB];
+		
+		for(int i = 0; i < rowsA; i++ ) {
+			
+			for(int j = 0; j < colsB; j++) {
+				
+				for(int k = 0; k < colsA; k++) {
+					
+					result[i][j] += matrixA[i][k] * matrixB[k][j];
+					
+				}//end of nested-innermost for loop
+				
+			}//end of inner-outermost for loop
+			
+		}//end of outer for loop
+		
+	return result;
+	
+	}//end of multiplyMatrices method
 
 }//end of main class 

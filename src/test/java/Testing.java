@@ -35,5 +35,16 @@ class Testing {
         assertEquals(-306, Main.determinant(matrix3)); // 3x3 matrix
 		
 	}//end of testDeterminateMatrix
+	
+	@Test
+	void testMutiplyMatrices() {
+		
+		 int[][] matrixA = {{1, 2, 3}, {4, 5, 6}};
+	     int[][] matrixB = {{7, 8}, {9, 10}, {11, 12}};
+	     int[][] expected = {{58, 64}, {139, 154}};
+
+	     assertArrayEquals(expected, Main.multiplyMatrices(matrixA, matrixB));
+		
+	}//end of testMutiplyMatrices method
 
 }//end of Testing class
