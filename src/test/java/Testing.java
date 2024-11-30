@@ -23,5 +23,17 @@ class Testing {
         assertEquals(-1, Main.binarySearch(new int[]{10}, 5)); // Element does not match
         
 	}//end of testBinarySearch function
+	
+	@Test
+	void testDeterminateMatrix() {
+		int[][] matrix1 = {{5}};
+        int[][] matrix2 = {{1, 2}, {3, 4}};
+        int[][] matrix3 = {{6, 1, 1}, {4, -2, 5}, {2, 8, 7}};
+        
+        assertEquals(5, Main.determinant(matrix1)); // 1x1 matrix
+        assertEquals(-2, Main.determinant(matrix2)); // 2x2 matrix
+        assertEquals(-306, Main.determinant(matrix3)); // 3x3 matrix
+		
+	}//end of testDeterminateMatrix
 
 }//end of Testing class
