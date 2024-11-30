@@ -50,5 +50,55 @@ public class Main {
 		return -1; //Key not found
 		
 	}//end of binarySearch method 
+	
+	public static int determinant(int[][] matrix) {
+		
+		if (matrix == null || matrix.length == 0 || matrix.length != matrix[0].length) {
+            
+			throw new IllegalArgumentException("Matrix must be square and non-null.");
+        
+		}//end of if statement 
+		
+		int n = matrix.length;
+        if (n == 1) return matrix[0][0];
+        
+        if (n == 2) {
+            
+        	return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0];
+        
+        }//end of outer if statement
+
+        int det = 0;
+        for (int col = 0; col < n; col++) {
+            det += Math.pow(-1, col) * matrix[0][col] * determinant(getMinor(matrix, 0, col));
+        }//end of for loop 
+        return det;
+		
+		
+	}//end of determinant method
+	
+	private static int[][] getMinor(int[][] matrix, int row, int col) {
+        int n = matrix.length;
+        
+        int[][] minor = new int[n - 1][n - 1];
+        
+        int r = 0;
+        
+        for (int i = 0; i < n; i++) {
+            
+        	if (i == row) continue;
+            
+            int c = 0;
+            
+            for (int j = 0; j < n; j++) {
+                
+            	if (j == col) continue;
+                
+                minor[r][c++] = matrix[i][j];
+            }//end of for loop 
+            r++;
+        }
+        return minor;
+    }//end of getMinor method 
 
 }//end of main class 
