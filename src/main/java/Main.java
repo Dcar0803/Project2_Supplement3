@@ -15,6 +15,14 @@ public class Main {
 
 	}
 	
+	/**
+     * Performs a binary search on a sorted array.
+     *
+     * @param sortedArray Array of integers, sorted in ascending order.
+     * @param key The integer value to search for in the array.
+     * @return The index of the key in the array if found, otherwise -1.
+     */
+	
 	public static int binarySearch(int[] sortedArray, int key) {
 		
 		int left = 0;
