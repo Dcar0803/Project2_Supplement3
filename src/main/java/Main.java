@@ -118,6 +118,17 @@ public class Main {
         return minor;
     }//end of getMinor method 
 	
+	
+	
+	 /**
+     * Multiplies two matrices together.
+     * @param matrixA The first matrix.
+     * @param matrixB The second matrix.
+     * @return The resulting matrix after multiplication.
+     * @throws IllegalArgumentException if matrices are incompatible for multiplication.
+     */
+	
+	
 	public static int[][] multiplyMatrices(int[][]matrixA, int[][]matrixB) {
 		
 		int rowsA, colsA, rowsB, colsB;
