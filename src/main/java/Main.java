@@ -11,7 +11,51 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		 // 1. Binary Search
+        int[] sortedArray = {1, 3, 5, 7, 9};
+        int key = 5;
+        
+        int index = binarySearch(sortedArray, key);
+        System.out.println("Binary Search: Key " + key + " found at index: " + index);
+
+        
+        // 2. Determinant of a Matrix
+        int[][] matrix = {
+            {1, 2, 3},
+            {0, 1, 4},
+            {5, 6, 0}
+        };
+        
+        int determinantValue = determinant(matrix);
+        System.out.println("Determinant of the matrix: " + determinantValue);
+
+        // 3. Matrix Multiplication
+        int[][] matrixA = {
+            {1, 2, 3},
+            {4, 5, 6}
+        };
+        
+        
+        int[][] matrixB = {
+            {7, 8},
+            {9, 10},
+            {11, 12}
+        };
+        
+     
+        int[][] product = multiplyMatrices(matrixA, matrixB);
+
+        System.out.println("Matrix Multiplication Result:");
+        for (int i = 0; i < product.length; i++) {
+           
+        	for (int j = 0; j < product[0].length; j++) {
+                
+        		System.out.print(product[i][j] + " ");
+            
+        	}// end of inner for loop 
+            System.out.println();
+        }//end of outer for loop
 
 	}
 	
