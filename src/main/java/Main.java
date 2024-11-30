@@ -7,9 +7,18 @@
  */
 public class Main {
 
-	/**
-	 * @param args
-	 */
+	   /**
+     * Main method to demonstrate the binary search, determinant, 
+     * and matrix multiplication functions.
+     *
+     * Example Usage:
+     * - Demonstrates binary search on a sorted array.
+     * - Calculates the determinant of a matrix.
+     * - Multiplies two matrices and prints the result.
+     *
+     * @param args Command-line arguments (not used).
+     */
+	
 	public static void main(String[] args) {
 		
 		 // 1. Binary Search
